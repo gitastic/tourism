@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+.container{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.header{
+    --bg-image:url("images/oussama-sabri-m3bCfGum88U-unsplash.jpg");
+    --bg-opacity: .3;
+
+    width: 100%;
+    height: 20rem;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(56, 53, 53);
+}
+
+
+.header h3{
+    padding-top: 10%;
+}
+.header ::after {
+    content: '';
+    position: absolute;
+
+    z-index: -1;
+    inset: 0;
+    opacity: var(--bg-opacity);
+
+    background-image: var(--bg-image);
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar{
+    background-color: rgba(51 51 51/.8);
+    width: 100%;
+    height: 5em;
+    cursor: pointer;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+.logo{
+    width: 10%;
+    align-items: center;
+    justify-content: center;
+}
+.nav{
+    width: 90%;
+    justify-content: end;
+    height: 100%;
+}
+
+.nav ul{
+    text-align: end;
+    height: 100%;
+}
+.nav ul li{
+    text-align: center; 
+    display: inline-block;
+    width: 10em;
+    height: 100%;
+    position: relative;
+    padding-top: 1.75em;
+}
+.nav ul li a{
+    font-size: 17px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: white;
+    width: 3em;
+    font-weight: 700;
+}
+.nav ul li:hover{
+    background-color: red;
+}
+
+.dropdown__menu{
+    display: none;
+}
+
+
+.nav ul li:hover .dropdown__menu{
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: #333;
+}
+
+.nav ul li:hover .dropdown__menu ul{
+    display: block;
+}
+
+.nav ul li:hover .dropdown__menu ul li{
+    width: 160px;
+    height: 5em;
+}
+.nav ul li:hover .dropdown__menu ul li a{
+    width: 100%;
+}
+.wrapper{
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    background-color: #fff;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+
+}
+
+.content{
+    float: right;
+    display: flex;
+    flex-flow: wrap;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    padding: 0rem 3rem 0rem;
+    overflow-y: scroll;
+    overflow-x: auto;
+    white-space: nowrap;
+    top: 10%;
+}
+
+.content::-webkit-scrollbar {
+    display: none;
+  }
+
+.card{
+    width: 320px; 
+    height: 400px;
+    padding: .5rem .5rem;
+    background: transparent;
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    transition: 500ms ease-in-out;
+    margin-top: 3em;
+    outline: 2px solid #333;
+    outline-offset: -.5rem;
+
+}
+.card a{
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+
+.card:hover{
+    transform: scale(.9);
+    outline-offset: 0;
+}
+
+
+.card_image{
+    width: 100%;
+    height: 65%;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.card_info{
+    display: flex;
+    flex-flow: row wrap;
+    height: 35%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    padding: 0.5rem 0rem 0rem;
+    position: relative;
+    z-index: 3;
+    color: black;
+    opacity: 1;
+}
+
+.hotel_name{
+    width: 100%;
+    height: 30%;
+}
+
+.card_info .pricing{
+    justify-content: center;
+    float: left;
+    width: 30%;
+    height: 70%;
+}
+
+.card_info .rating{
+    width: 70%;
+    height: 70%;
+    font-size: 12px;
+}
+
+.footer{
+    width: 100%;
+    height: 10vh;
+    background-color: #333;
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 7em;
+    align-items: center;
+    justify-content: center;
+}
