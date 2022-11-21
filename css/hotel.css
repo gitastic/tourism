@@ -4,10 +4,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Oswald', sans-serif; 
 }
 .container{
-    width: 100%;
     display: flex;
     flex-flow: row wrap;
 }
@@ -18,16 +17,17 @@
 
     width: 100%;
     height: 20rem;
-    text-align: center;
+    text-align: start;
     font-size: 30px;
     font-weight: bold;
-    color: rgb(56, 53, 53);
 }
-
 
 .header h3{
+    font-size: 45px;
     padding-top: 10%;
+    padding-left: 10%;   
 }
+
 .header ::after {
     content: '';
     position: absolute;
@@ -114,120 +114,113 @@
     width: 100%;
 }
 .wrapper{
+    background-color: #333;
+    display: flex;
+    flex-flow: row wrap;
+    height: 120vh;
+
+}
+.side{
+    background-image: linear-gradient(to bottom left, rgba(1 1 1/.4), rgba(255 255 255/.4));
+    display: flex;
+    width: 20%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.side .sidebar{
+    height: 80%;
+    width: 100%;
+}
+
+.sidebar_head{
+    padding: 1rem 5rem;
+    font-size: 25px;
+}
+
+.input{
+    padding: 1rem 0.5rem;
     display: flex;
     flex-flow: row wrap;
     width: 100%;
-    background-color: #fff;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 20px;
+    text-align: center;
+}
 
+input{
+    width: 100%;
+    height: 2rem;
+}
+
+label{
+    width: 100%;
+}
+
+#reason{
+    padding: 0;
+}
+
+button{
+    width:50%;
+    height: 2.5rem;
+    font-size: 20px;
+    letter-spacing: 2px;
+    position: relative;
+    left: 25%;
+    background-color: red;
+    border: none;
 }
 
 .content{
-    float: right;
-    display: flex;
-    flex-flow: wrap;
-    width: 100%;
-    height: 100%;
-    justify-content: space-between;
-    padding: 0rem 3rem 0rem;
-    overflow-y: scroll;
-    overflow-x: auto;
-    white-space: nowrap;
-    top: 10%;
-}
-
-.content::-webkit-scrollbar {
-    display: none;
-  }
-
-.card{
-    width: 320px; 
-    height: 400px;
-    padding: .5rem .5rem;
-    background: transparent;
-    position: relative;
+    width: 77%;
+    background-color: transparent;
+    margin-top: 5em;
+    height: 70%;
     display: flex;
     flex-flow: row wrap;
-    transition: 500ms ease-in-out;
-    margin-top: 3em;
-    outline: 2px solid #333;
-    outline-offset: -.5rem;
-
-}
-.card a{
-    width: 100%;
-    height: 100%;
-    text-decoration: none;
-}
-
-.card:hover{
-    transform: scale(.9);
-    outline-offset: 0;
-}
-
-
-.card_image{
-    width: 100%;
-    height: 65%;
-    position: relative;
-    top: 0;
-    left: 0;
-}
-
-img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.card_info{
-    display: flex;
-    flex-flow: row wrap;
-    height: 35%;
-    width: 100%;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    width: 100%;
-    padding: 0.5rem 0rem 0rem;
-    position: relative;
-    z-index: 3;
-    color: black;
-    opacity: 1;
 }
 
-.hotel_name{
-    width: 100%;
-    height: 50%;
+.content_image{
+    background-image:url("images/patrick-langwallner-6A6EFplTd4M-unsplash.jpg");
+    opacity: .9;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    inset: 0;
+
+    height: 90%;
+    width: 50%;
+    margin-left: 3em;
+    border-radius: 10px;
 }
 
-.card_info .pricing{
-    justify-content: center;
-    float: left;
+
+.content_description{
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: #fff;
+    font-size: 16px;
+    height: 100%;
     width: 30%;
-    height: 50%;
 }
 
-.card_info .rating{
-    display: flex;
-    flex-flow: row wrap;
-    width: 70%;
-    height: 50%;
-    font-size: 12px;
+.content_description ul{
+    list-style-type: none;
 }
-
 .footer{
     width: 100%;
     height: 10vh;
     background-color: #333;
     display: flex;
     flex-flow: row wrap;
-    margin-top: 7em;
+    gap: 6px;
+    margin-top: 5em;
     align-items: center;
     justify-content: center;
+}
+.foot_nav{
+    width: 33.015%;
 }
