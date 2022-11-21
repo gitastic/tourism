@@ -117,22 +117,23 @@
     background-color: #333;
     display: flex;
     flex-flow: row wrap;
-    height: 120vh;
+    height: 200vh;
 
 }
 .side{
-    background-image: linear-gradient(to bottom left, rgba(1 1 1/.4), rgba(255 255 255/.4));
+    background-color: transparent;
     display: flex;
     width: 20%;
     height: 100%;
-    align-items: center;
-    justify-content: center;
     cursor: pointer;
 }
 
 .side .sidebar{
-    height: 80%;
+    height: 400px;
     width: 100%;
+    background: #fff;
+    position: sticky;
+    top: 5em;
 }
 
 .sidebar_head{
@@ -140,6 +141,9 @@
     font-size: 25px;
 }
 
+.sidebar_form{
+    background: #fff;
+}
 .input{
     padding: 1rem 0.5rem;
     display: flex;
@@ -191,8 +195,8 @@ button{
     z-index: 1;
     inset: 0;
 
-    height: 90%;
-    width: 50%;
+    height: 60%;
+    width: 100%;
     margin-left: 3em;
     border-radius: 10px;
 }
@@ -201,10 +205,11 @@ button{
 .content_description{
     font-weight: 500;
     letter-spacing: 2px;
+    margin-left: 3em;
     color: #fff;
     font-size: 16px;
-    height: 100%;
-    width: 30%;
+    height: 40%;
+    width: 100%;
 }
 
 .content_description ul{
